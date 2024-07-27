@@ -6,32 +6,148 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeScreen from "./Screens/HomeScreen";
 import AllCropsScreen from "./Screens/AllCropScreen";
-
+import CropDetails from './Screens/CropDetails';
+import FertilizerDetailsScreen from './Screens/FertilizerDetailsScreen';
+import AllFertilizerScreen from './Screens/AllFertilizerScreen.js';
+import AllPestScreen from './Screens/AllPestScreen.js';
+import SelectPlanScreen from './Screens/SelectPlanScreen.js';
+import SeedDetails from './Screens/SeedDetails.js';
+import WeatherScreen from './Screens/WeatherScreen.js';
+import FarmIQTabs from './Components/FarmIQTabs.js';
+import PestDetailsScreen from './Screens/PestDetailsScreen.js';
+import SelectedPlansScreen from './Screens/SelectedPlansScreen.js';
+import ProgressDetailsScreen from './Screens/ProgressDetailsScreen.js';
+import ExpenseCalculator from './Screens/ExpenseCalculator.js';
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
 
 
-const MyTabs = () => (
-  <Tab.Navigator>
-    <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="AllCrops" component={AllCropsScreen} />
+const MyDrawer = () => (
+  <Drawer.Navigator
+  screenOptions={{
+    headerStyle: { backgroundColor: '#000' },
+    headerTintColor: '#fff',
+    sceneContainerStyle: { backgroundColor: '#fff' },
+    drawerContentStyle: { backgroundColor: '#000000'},
+    drawerActiveTintColor: '#000',
+    drawerInactiveTintColor: '#fff',
+    drawerActiveBackgroundColor: '#fff',
+  }}
+>
 
-  </Tab.Navigator>
+  {/* <Drawer.Screen
+    name="Home"
+    component={HomeScreen}
+    options={{
+      title: 'Farm IQ',
+      drawerIcon: ({ color, size }) =>( <Icon name='home' color={color} size={size} /> ),
+    }}
+  /> */}
+  <Drawer.Screen
+      name="FarmIQTabs"
+      component={FarmIQTabs}
+      options={{
+        title: 'Farm IQ',
+        drawerIcon: ({ color, size }) => <Icon name='home' color={color} size={size} />,
+      }}
+    />
+  <Drawer.Screen
+    name="Crops"
+    component={AllCropsScreen}
+    options={{
+      title: 'All Crops',
+      drawerIcon: ({ color, size }) =>( <Icon name='eco' color={color} size={size} /> ),
+
+    }}
+  />
+  <Drawer.Screen
+    name="AllFertilizers"
+    component={AllFertilizerScreen}
+    options={{
+      title: 'All Fertilizers',
+      drawerIcon: ({ color, size }) =>( <Icon name='spa' color={color} size={size} /> ),
+
+    }}
+  />
+   <Drawer.Screen
+    name="AllPests"
+    component={AllPestScreen}
+    options={{
+      title: 'All Pests',
+      drawerIcon: ({ color, size }) =>( <Icon name='landscape' color={color} size={size} /> ),
+
+    }}
+  />
+
+<Drawer.Screen
+    name="Weather"
+    component={WeatherScreen}
+    options={{
+      title: 'Weather Updates',
+      drawerIcon: ({ color, size }) =>( <Icon name='cloud' color={color} size={size} /> ),
+
+    }}
+  />
+  <Drawer.Screen
+    name="SelectedPlans"
+    component={SelectedPlansScreen}
+    options={{
+      title: 'Selected Plans',
+      drawerIcon: ({ color, size }) =>( <Icon name='assignment' color={color} size={size} /> ),
+    }}
+  />
+</Drawer.Navigator>
 );
+
+  
 
 const App = () => (
   <Provider store={store}>
+
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Tabs">
-        <Drawer.Screen name="Tabs" component={MyTabs} />
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="AllCrops" component={AllCropsScreen} />
-      </Drawer.Navigator>
+      <Stack.Navigator screenOptions={{
+            headerStyle: { backgroundColor: '#000' },
+            headerTintColor: 'white',
+            contentStyle: { backgroundColor: '#fff' },
+          }} >
+           <Stack.Screen
+            name="Drawer"
+            component={MyDrawer}
+            options={{
+              headerShown: false,
+            }}
+          />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="AllCrops" component={AllCropsScreen} options={{
+              title: 'All Crops Overview',
+            }} />
+        <Stack.Screen name="CropDetails" component={CropDetails} options={{
+              title: 'Crop Details ',
+            }}/>
+        <Stack.Screen name="SeedDetails" component={SeedDetails} options={{
+              title: 'Seed Details ',
+            }}/>
+        <Stack.Screen name="FertilizerDetails" component={FertilizerDetailsScreen} options={{
+              title: 'Fertilizer Details ',
+            }}/>
+            <Stack.Screen name="PestDetails" component={PestDetailsScreen} options={{
+              title: 'Pest Details ',
+            }}/>
+        <Stack.Screen name="SelectPlan" component={SelectPlanScreen} options={{
+              title: 'Select Your Plan ',
+            }}/>
+        <Stack.Screen name="Progress" component={ProgressDetailsScreen} options={{
+              title: 'Your Current Progress ',
+            }}/>
+        <Stack.Screen name="ExpenseCalculator" component={ExpenseCalculator} options={{
+              title: 'ExpenseCalculator ',
+            }}/>
+      </Stack.Navigator>
     </NavigationContainer>
   </Provider>
 );

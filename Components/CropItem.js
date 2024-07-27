@@ -1,12 +1,13 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-
+import { View, Text, Image, StyleSheet,TouchableOpacity } from 'react-native';
 const CropItem = ({ imageUrl, title }) => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.cropItemContainer}>
+    <TouchableOpacity style={styles.cropItemContainer} onPress={() => navigation.navigate('CropDetails')}>
       <Image source={{ uri: imageUrl }} style={styles.cropImage} />
       <Text style={styles.cropTitle}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

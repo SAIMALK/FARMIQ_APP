@@ -4,19 +4,23 @@ import Header from "../Components/Header";
 import Offers from "../Components/Offers";
 import ExpertAdvice from "../Components/ExpertAdvice";
 import PlantationGrid from "../Components/PlantationGrid";
+import Icons from "../Components/Icons";
+import Cards from "../Components/Cards"
+
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Header />
+      {/* <Header /> */}
       <ScrollView style={styles.scrollContainer}>
         <Offers />
-        <ExpertAdvice />
-        <PlantationGrid />
+        <Icons />
+        {/* <ExpertAdvice /> */}
+        <Cards/>
         <View style={styles.buttonContainer}>
           <Button
-            title="Press Me"
-            onPress={() => navigation.navigate('AllCrops')}
-            color="#841584" // Optional: You can set a custom color
+            title="View All"
+            onPress={() => navigation.navigate("AllCrops")}
+            color="#000" // Optional: You can set a custom color
           />
         </View>
       </ScrollView>
