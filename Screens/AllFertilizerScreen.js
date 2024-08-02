@@ -12,23 +12,23 @@ const AllFertilizerScreen = () => {
 
 const PlantationGrid = () => {
     const crops = [
-      { imageUrl: 'https://images.unsplash.com/photo-1715944476655-20a7d99ae687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGF0ZSUyMHBhbG1zfGVufDB8fDB8fHww', title: 'Date Palm' },
-      { imageUrl: 'https://images.unsplash.com/photo-1509817775895-79efefb813d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29jb251dHxlbnwwfHwwfHx8MA%3D%3D', title: 'Coconut' },
-      { imageUrl: 'https://images.unsplash.com/photo-1602943543714-cf535b048440?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhJTIwbGVhdmVzfGVufDB8fDB8fHww', title: 'Tea' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1669205342640-aef28ff08cd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxtb25kJTIwdHJlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Almond' },
-      { imageUrl: 'https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdoZWF0fGVufDB8fDB8fHww', title: 'Wheat' },
-      { imageUrl: 'https://images.unsplash.com/photo-1511817354854-e361703ac368?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29ybnxlbnwwfHwwfHx8MA%3D%3D', title: 'Corn' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1675237625862-d982e7f44696?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Coffee' },
-      { imageUrl: 'https://images.unsplash.com/photo-1715944476655-20a7d99ae687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGF0ZSUyMHBhbG1zfGVufDB8fDB8fHww', title: 'Date Palm' },
-      { imageUrl: 'https://images.unsplash.com/photo-1509817775895-79efefb813d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29jb251dHxlbnwwfHwwfHx8MA%3D%3D', title: 'Coconut' },
-      { imageUrl: 'https://images.unsplash.com/photo-1602943543714-cf535b048440?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhJTIwbGVhdmVzfGVufDB8fDB8fHww', title: 'Tea' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1669205342640-aef28ff08cd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxtb25kJTIwdHJlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Almond' },
-      { imageUrl: 'https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdoZWF0fGVufDB8fDB8fHww', title: 'Wheat' },
-      { imageUrl: 'https://images.unsplash.com/photo-1511817354854-e361703ac368?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29ybnxlbnwwfHwwfHx8MA%3D%3D', title: 'Corn' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1675237625862-d982e7f44696?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Coffee' },
+      { imageUrl: 'https://media.istockphoto.com/id/1372946919/photo/chemical-fertilizer.jpg?s=612x612&w=0&k=20&c=x18we3x5SKahElE76FbIoaKD-wuSCe1qRo4-8pnDNZA=', title: 'TSP' },
+      { imageUrl: 'https://media.istockphoto.com/id/1340516865/photo/opened-plastic-bag-with-black-granules-of-chicken-manure-on-dark-soil-background-closeup.jpg?s=612x612&w=0&k=20&c=o00BGwgUkyLeTf1i0jNfbTpw7DlBEbBOG8lF309PcFk=', title: 'UREA' },
+      { imageUrl: 'https://media.istockphoto.com/id/1319576107/photo/young-adult-woman-hands-holding-opened-plastic-bag-with-gray-complex-fertiliser-granules-on.jpg?s=612x612&w=0&k=20&c=1MJS2Zk_3OiT6X9DJySAurA3iFrsXylHSh5_NW62gqY=', title: 'DAP' },
+      { imageUrl: 'https://media.istockphoto.com/id/1328836451/photo/opened-plastic-bag-with-green-complex-fertiliser-granules-on-dark-soil-background-closeup.jpg?s=612x612&w=0&k=20&c=igUvKeBPND1RKHx6uLMCQZAF48QU038nZbCbzJ7pBRo=', title: 'NPK' },
+      { imageUrl: 'https://media.istockphoto.com/id/136349695/photo/bagged-fertilizer.jpg?s=612x612&w=0&k=20&c=khUx5GLShkBiourmuORq0VXLVBAPUHqyu_IzQr0RvKw=', title: 'CAN' },
+      { imageUrl: 'https://media.istockphoto.com/id/1175171754/photo/fertilizer-and-working-gloves-on-the-grass.jpg?s=612x612&w=0&k=20&c=J8rBNsAC3LwSG8F3UppIyHiFUS8Uc_czVVup_BhTxYM=', title: 'NP' },
+      { imageUrl: 'https://media.istockphoto.com/id/1461682590/photo/person-in-gloves-taking-pellets-of-ammonium-nitrate-from-bag-closeup-mineral-fertilizer.jpg?s=612x612&w=0&k=20&c=jMlACF_tCq5wnMNk4LPdEsErla7j2sj2r-0DdqCKGSs=', title: 'MAP' },
+      { imageUrl: 'https://media.istockphoto.com/id/1400234628/photo/close-up-view-of-paper-bag-with-fertilizer-on-green-grass.jpg?s=612x612&w=0&k=20&c=UhXfer1_SIjvduQg-TN33pMQrDhKk1fxb_j2wF398Wg=', title: 'MOP' },
+      { imageUrl: 'https://media.istockphoto.com/id/1340516865/photo/opened-plastic-bag-with-black-granules-of-chicken-manure-on-dark-soil-background-closeup.jpg?s=612x612&w=0&k=20&c=o00BGwgUkyLeTf1i0jNfbTpw7DlBEbBOG8lF309PcFk=', title: 'UREA' },
+      { imageUrl: 'https://media.istockphoto.com/id/1319576107/photo/young-adult-woman-hands-holding-opened-plastic-bag-with-gray-complex-fertiliser-granules-on.jpg?s=612x612&w=0&k=20&c=1MJS2Zk_3OiT6X9DJySAurA3iFrsXylHSh5_NW62gqY=', title: 'DAP' },
+      { imageUrl: 'https://media.istockphoto.com/id/1328836451/photo/opened-plastic-bag-with-green-complex-fertiliser-granules-on-dark-soil-background-closeup.jpg?s=612x612&w=0&k=20&c=igUvKeBPND1RKHx6uLMCQZAF48QU038nZbCbzJ7pBRo=', title: 'NPK' },
+      { imageUrl: 'https://media.istockphoto.com/id/1461682590/photo/person-in-gloves-taking-pellets-of-ammonium-nitrate-from-bag-closeup-mineral-fertilizer.jpg?s=612x612&w=0&k=20&c=jMlACF_tCq5wnMNk4LPdEsErla7j2sj2r-0DdqCKGSs=', title: 'MAP' },
+
+    ];
   
-  ];
-  
+
+
     return (
       <View style={styles.gridContainer}>
         {crops.map((crop, index) => (
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     padding: 10,
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
   },
   cropItemContainer: {
     width: '48%',  // Adjust width to fit two items per row
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     fontSize: 14,
     fontWeight: 'bold',
-    color:'white',
+    color:'#000',
   },
 });
 

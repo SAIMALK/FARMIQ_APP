@@ -138,8 +138,17 @@ const App = () => (
             <Stack.Screen name="PestDetails" component={PestDetailsScreen} options={{
               title: 'Pest Details ',
             }}/>
+            <Stack.Screen name="AllPestScreen" component={AllPestScreen} options={{
+              title: 'All Pests',
+            }}/>
+            <Stack.Screen name="AllFertilizerScreen" component={AllFertilizerScreen} options={{
+              title: 'All Fertilizers',
+            }}/>
         <Stack.Screen name="SelectPlan" component={SelectPlanScreen} options={{
               title: 'Select Your Plan ',
+            }}/>
+            <Stack.Screen name="SelectedPlansScreen" component={SelectedPlansScreen} options={{
+              title: 'Selected Plans ',
             }}/>
         <Stack.Screen name="Progress" component={ProgressDetailsScreen} options={{
               title: 'Your Current Progress ',

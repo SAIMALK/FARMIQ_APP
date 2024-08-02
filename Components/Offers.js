@@ -16,7 +16,7 @@ const Offers = () => {
         source={{ uri: 'https://plus.unsplash.com/premium_photo-1664116928607-896124327b11?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JvcHN8ZW58MHx8MHx8fDA%3D' }} // Replace with actual image URL
         style={styles.offerImage}
       />
-      <Text style={styles.offerText}>Boost your productivity with tailored solutions for every stage of crop growth.</Text>
+      <Text style={styles.offerText}>Boost your productivity with tailored plans for every stage of crop growth.</Text>
     </View>
     </>
   );

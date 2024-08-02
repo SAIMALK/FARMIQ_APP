@@ -12,20 +12,18 @@ const AllPestScreen = () => {
 
 const PlantationGrid = () => {
     const crops = [
-      { imageUrl: 'https://images.unsplash.com/photo-1715944476655-20a7d99ae687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGF0ZSUyMHBhbG1zfGVufDB8fDB8fHww', title: 'Date Palm' },
-      { imageUrl: 'https://images.unsplash.com/photo-1509817775895-79efefb813d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29jb251dHxlbnwwfHwwfHx8MA%3D%3D', title: 'Coconut' },
-      { imageUrl: 'https://images.unsplash.com/photo-1602943543714-cf535b048440?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhJTIwbGVhdmVzfGVufDB8fDB8fHww', title: 'Tea' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1669205342640-aef28ff08cd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxtb25kJTIwdHJlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Almond' },
-      { imageUrl: 'https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdoZWF0fGVufDB8fDB8fHww', title: 'Wheat' },
-      { imageUrl: 'https://images.unsplash.com/photo-1511817354854-e361703ac368?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29ybnxlbnwwfHwwfHx8MA%3D%3D', title: 'Corn' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1675237625862-d982e7f44696?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Coffee' },
-      { imageUrl: 'https://images.unsplash.com/photo-1715944476655-20a7d99ae687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGF0ZSUyMHBhbG1zfGVufDB8fDB8fHww', title: 'Date Palm' },
-      { imageUrl: 'https://images.unsplash.com/photo-1509817775895-79efefb813d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29jb251dHxlbnwwfHwwfHx8MA%3D%3D', title: 'Coconut' },
-      { imageUrl: 'https://images.unsplash.com/photo-1602943543714-cf535b048440?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhJTIwbGVhdmVzfGVufDB8fDB8fHww', title: 'Tea' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1669205342640-aef28ff08cd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxtb25kJTIwdHJlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Almond' },
-      { imageUrl: 'https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdoZWF0fGVufDB8fDB8fHww', title: 'Wheat' },
-      { imageUrl: 'https://images.unsplash.com/photo-1511817354854-e361703ac368?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29ybnxlbnwwfHwwfHx8MA%3D%3D', title: 'Corn' },
-      { imageUrl: 'https://plus.unsplash.com/premium_photo-1675237625862-d982e7f44696?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D', title: 'Coffee' },
+      { imageUrl: 'https://media.gettyimages.com/id/1125607687/photo/farmer-spraying-pesticide.jpg?s=612x612&w=0&k=20&c=yNWwaXRChCpEou9Vx7BH_s4hJZN7H22N2hJsjmWR7yk=', title: 'Emactin' },
+      { imageUrl: 'https://media.gettyimages.com/id/1272140080/photo/pesticide-application-spray-in-plant.jpg?s=612x612&w=0&k=20&c=uXObw237suWmfRgIuSAB5sGVeoXVDtYgYA2HXYwN1_o=', title: 'Lorsban' },
+      { imageUrl: 'https://media.gettyimages.com/id/1290199650/photo/asian-farmer-wear-safety-clothes-with-protective-mask-spraying-organic-pesticides-on-tomato.jpg?s=612x612&w=0&k=20&c=dNgA5rwFvKBHvwcQupCYGDu0SMg-NzIOyNnEN-0ylEc=', title: 'Karate' },
+      { imageUrl: 'https://media.gettyimages.com/id/1319657586/photo/tractor-spraying-pesticide-on-wheat-field-during-sunny-day.jpg?s=612x612&w=0&k=20&c=mYfhN7--gc6fTaxjwYOEOtRkPzXJzraYIdFgBKy9Erw=', title: 'Talstar' },
+      { imageUrl: 'https://media.gettyimages.com/id/1467344809/photo/young-farmer-sprays-his-garden-of-fresh-lettuce-cabbage-and-parsley-against-pests.jpg?s=612x612&w=0&k=20&c=TOxrSbEYeYlmxqUi9iWs0eKlYTo4L4ga8U8YnX8EjLc=', title: 'Dursban' },
+      { imageUrl: 'https://media.gettyimages.com/id/833284634/photo/crop-sprayer.jpg?s=612x612&w=0&k=20&c=vUauMNioP579mhBdvWKYUbDw1mzCle3GoU2JhTEwzk0=', title: 'Capture' },
+      { imageUrl: 'https://media.gettyimages.com/id/958953510/photo/agricultural-worker-takes-care-of-his-estate.jpg?s=612x612&w=0&k=20&c=asNVXLUWqkGa5DKVFo9Z3WWoTu9Hj5DCUuIPbvcpPOQ=', title: 'Confidor' },
+      { imageUrl: 'https://media.gettyimages.com/id/84423441/photo/tractor-in-field-spraying-crop.jpg?s=612x612&w=0&k=20&c=omZD0Cm79hrLIiRHBkkkbPIaCFrkGnswmnssw2zrd3k=', title: 'Gaucho' },
+      { imageUrl: 'https://media.gettyimages.com/id/157187324/photo/spraying-on-field.jpg?s=612x612&w=0&k=20&c=6ECjp4CxJsYpncv2NiPDI4S7j5YmJNBCLvpMQrSZ78w=', title: 'Larvin' },
+      { imageUrl: 'https://media.gettyimages.com/id/1445623974/photo/a-farmer-is-spraying-chemicals.jpg?s=612x612&w=0&k=20&c=STSJ_mANI3y8S1lnVvjxhPxV_56B1ik0SHZe8n8Wi58=', title: 'Tracer' },
+      { imageUrl: 'https://media.gettyimages.com/id/1491871348/photo/farmer-spraying-chemical-or-fertilizer-on-tobacco-plants.jpg?s=612x612&w=0&k=20&c=IOSJ3tmkltSxErm8LDj37iPSLA8QLHH_nHdAPstabEY=', title: 'Cabal' },
+      { imageUrl: 'https://media.gettyimages.com/id/1198432941/photo/young-farm-worker-spraying-tomatoes-in-polyethylene-tunnel.jpg?s=612x612&w=0&k=20&c=Zi1lShWYAKq0BETvwuYxjg2tvdrW7AjGeqTXAwDzGJQ=', title: 'Proclaim' },
   
   ];
   

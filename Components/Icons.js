@@ -1,41 +1,36 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
- 
+import { useNavigation } from '@react-navigation/native';
+
 const Icons = () => {
-    return (
+  const navigation = useNavigation();
+  return (
       <View style={styles.mainContainer}>
         
         <View style={styles.iconsContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('AllFertilizerScreen')}>
             <Icon name="spa" size={28} color="#4CAF50"/>
           </TouchableOpacity>
-        <Text style={styles.iconName}>FARMIQ</Text>
+        <Text style={styles.iconName}>Fertilizer</Text>
         </View>
 
         <View style={styles.iconsContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('AllPestScreen')}>
             <Icon name="landscape" size={28} color="#4CAF50"/>
           </TouchableOpacity>
         <Text style={styles.iconName}>Pests</Text>
         </View>
 
         <View style={styles.iconsContainer}>
-          <TouchableOpacity>
-            <Icon name="local-bar" size={28} color="#4CAF50"/>
-          </TouchableOpacity>
-        <Text style={styles.iconName}>Fertilizers</Text>
-        </View>
-
-        <View style={styles.iconsContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('SelectedPlansScreen')}>
             <Icon name="assignment" size={28} color="#4CAF50"/>
           </TouchableOpacity>
         <Text style={styles.iconName}>Plans</Text>
         </View>
 
         <View style={styles.iconsContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('AllCrops')}>
             <Icon name="eco" size={28} color="#4CAF50"/>
           </TouchableOpacity>
         <Text style={styles.iconName}>Crops</Text>

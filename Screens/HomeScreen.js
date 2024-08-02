@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View, Button, StyleSheet } from "react-native";
+import { ScrollView, View, Button, StyleSheet,Text } from "react-native";
 import Header from "../Components/Header";
 import Offers from "../Components/Offers";
 import ExpertAdvice from "../Components/ExpertAdvice";
@@ -14,6 +14,10 @@ const HomeScreen = ({ navigation }) => {
       <ScrollView style={styles.scrollContainer}>
         <Offers />
         <Icons />
+        <View>
+        <View style={styles.hr} />
+        <Text style={styles.text}>Recommended Plans</Text>
+        </View>
         {/* <ExpertAdvice /> */}
         <Cards/>
         <View style={styles.buttonContainer}>
@@ -31,13 +35,26 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#fff",
   },
   scrollContainer: {
     flex: 1,
   },
+  text: {
+    flex: 1,
+    fontSize: 20,
+    fontWeight: 'bold',
+    padding: 10,
+  },
   buttonContainer: {
     margin: 10,
+  },
+  hr: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 2,
+    borderStyle: 'dotted',  // Add dotted style
+    marginVertical: 10,
+    marginHorizontal: 20, 
   },
 });
 
